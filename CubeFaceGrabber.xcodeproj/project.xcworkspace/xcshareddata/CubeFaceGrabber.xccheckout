@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BD707F47-4DD3-4A39-86AC-7EC0E72147C1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CubeFaceGrabber</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>90573DCB-7D5B-4B51-8406-F77BED3BF60C</key>
+		<string>ssh://github.com/carlbrown/OpenCVDemo360iDev2013.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CubeFaceGrabber/CubeFaceGrabber.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>90573DCB-7D5B-4B51-8406-F77BED3BF60C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/carlbrown/OpenCVDemo360iDev2013.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>90573DCB-7D5B-4B51-8406-F77BED3BF60C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>90573DCB-7D5B-4B51-8406-F77BED3BF60C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OpenCVDemo360iDev2013</string>
+		</dict>
+	</array>
+</dict>
+</plist>
