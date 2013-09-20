@@ -309,17 +309,6 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     return NO;
 }
 
--(BOOL)compareBigRadius:(int)bigRadius MediumRadius:(int)mediumRadius {
-    
-    float ratio = (float)bigRadius / (float)mediumRadius;
-    
-    if (ratio > 2.3 && ratio < 3.3) {
-        return YES;
-    }
-    
-    return NO;
-}
-
 -(BOOL)compareBigRadius:(int)bigRadius LittleRadius:(int)littleRadius {
     
     float ratio = (float)bigRadius / (float)littleRadius;
@@ -328,19 +317,6 @@ int LineIntersect(Vec4i l1, Vec4i l2)
         return YES;
     }
 
-    return NO;
-}
-
--(BOOL)compareBigRadius:(int)bigRadius DistBetweenBigCenter:(cv::Point)bigCenter MediumCenter:(cv::Point)mediumCenter {
-    
-    double distance = sqrt(pow((bigCenter.x-mediumCenter.x),2) + pow((bigCenter.y-mediumCenter.y),2));
-    
-    float ratio = (float)bigRadius / distance;
-    
-    if (ratio > 2.3 && ratio < 3.3) {
-        return YES;
-    }
-    
     return NO;
 }
 
