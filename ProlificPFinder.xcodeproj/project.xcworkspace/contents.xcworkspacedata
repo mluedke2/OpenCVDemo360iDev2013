@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CubeFaceGrabber.xcodeproj">
+      location = "self:ProlificPFinder.xcodeproj">
    </FileRef>
 </Workspace>

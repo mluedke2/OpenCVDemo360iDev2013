@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D3DE505F17BDD5780007FB39"
                BuildableName = "CubeFaceGrabber.app"
-               BlueprintName = "CubeFaceGrabber"
-               ReferencedContainer = "container:CubeFaceGrabber.xcodeproj">
+               BlueprintName = "ProlificPFinder"
+               ReferencedContainer = "container:ProlificPFinder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D3DE508517BDD5780007FB39"
                BuildableName = "CubeFaceGrabberTests.octest"
-               BlueprintName = "CubeFaceGrabberTests"
-               ReferencedContainer = "container:CubeFaceGrabber.xcodeproj">
+               BlueprintName = "ProlificPFinderTests"
+               ReferencedContainer = "container:ProlificPFinder.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3DE505F17BDD5780007FB39"
             BuildableName = "CubeFaceGrabber.app"
-            BlueprintName = "CubeFaceGrabber"
-            ReferencedContainer = "container:CubeFaceGrabber.xcodeproj">
+            BlueprintName = "ProlificPFinder"
+            ReferencedContainer = "container:ProlificPFinder.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3DE505F17BDD5780007FB39"
             BuildableName = "CubeFaceGrabber.app"
-            BlueprintName = "CubeFaceGrabber"
-            ReferencedContainer = "container:CubeFaceGrabber.xcodeproj">
+            BlueprintName = "ProlificPFinder"
+            ReferencedContainer = "container:ProlificPFinder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3DE505F17BDD5780007FB39"
             BuildableName = "CubeFaceGrabber.app"
-            BlueprintName = "CubeFaceGrabber"
-            ReferencedContainer = "container:CubeFaceGrabber.xcodeproj">
+            BlueprintName = "ProlificPFinder"
+            ReferencedContainer = "container:ProlificPFinder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
