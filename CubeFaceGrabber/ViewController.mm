@@ -166,7 +166,7 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     /// Apply the Hough Transform to find the circles
     HoughCircles( dst, circles, CV_HOUGH_GRADIENT, 1, dst.rows/8, 60, 60);
     
-    NSLog(@"circles found must be equal to or greater than 3. found: %lu", circles.size());
+    NSLog(@"circles found must be equal to or greater than 2. found: %lu", circles.size());
     
     if (![self testNumberOfCirclesFound:circles.size()]) {
         
@@ -176,9 +176,8 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     }
     
     int bigRadius = 0;
-    int mediumRadius = 0;
     int littleRadius = 0;
-    cv::Point bigCenter, mediumCenter, littleCenter;
+    cv::Point bigCenter, littleCenter;
     
     
     /// Draw the circles detected
@@ -207,37 +206,37 @@ int LineIntersect(Vec4i l1, Vec4i l2)
             
             cv::Point center2(cvRound(circles[j][0]), cvRound(circles[j][1]));
             
-            mediumRadius = cvRound(circles[j][2]);
-            mediumCenter = center2;
-            
-            for (size_t k = j + 1; k < circles.size(); k++) {
+            littleRadius = cvRound(circles[j][2]);
+            littleCenter = center2;
                 
-                NSLog(@"k: %zu", k);
+                cv::Point center3(cvRound(circles[j][0]), cvRound(circles[j][1]));
                 
-                cv::Point center3(cvRound(circles[k][0]), cvRound(circles[k][1]));
-                
-                littleRadius = cvRound(circles[k][2]);
+                littleRadius = cvRound(circles[j][2]);
                 littleCenter = center3;
 
                 // test possibility
-                if (![self testOrderingOfBigRadius:bigRadius MediumRadius:mediumRadius LittleRadius:littleRadius]) {
+                if (![self testOrderingOfBigRadius:bigRadius LittleRadius:littleRadius]) {
                     NSLog(@"failed test 2");
                     continue;
                 }
                 
+                /*
                 if (![self compareBigRadius:bigRadius MediumRadius:mediumRadius]) {
                     NSLog(@"failed test 3");
                     continue;
-                }
+                } */
                 
                 if (![self compareBigRadius:bigRadius LittleRadius:littleRadius]) {
                     NSLog(@"failed test 4");
                     continue;
                 }
+                /*
                 if (![self compareBigRadius:bigRadius DistBetweenBigCenter:bigCenter MediumCenter:mediumCenter]) {
                     NSLog(@"failed test 5");
                     continue;
                 }
+                */
+                
                 if (![self compareBigRadius:bigRadius DistBetweenBigCenter:bigCenter LittleCenter:littleCenter]) {
                     NSLog(@"failed test 6");
                     continue;
@@ -248,7 +247,7 @@ int LineIntersect(Vec4i l1, Vec4i l2)
                 self.resultLabel.text = @"YES!!";
                 
                 break;
-            }
+            
         }
     }
     
@@ -381,16 +380,16 @@ int LineIntersect(Vec4i l1, Vec4i l2)
 
 - (BOOL)testNumberOfCirclesFound:(int)numberOfCirclesFound {
     
-    if (numberOfCirclesFound >= 3) {
+    if (numberOfCirclesFound >= 2) {
         return YES;
     }
     
     return NO;
 }
 
-- (BOOL)testOrderingOfBigRadius:(int)bigRadius MediumRadius:(int)mediumRadius LittleRadius:(int)littleRadius {
+- (BOOL)testOrderingOfBigRadius:(int)bigRadius LittleRadius:(int)littleRadius {
     
-    if (bigRadius > mediumRadius && mediumRadius > littleRadius) {
+    if (bigRadius > littleRadius) {
         return YES;
     }
     
