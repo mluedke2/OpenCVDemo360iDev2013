@@ -144,6 +144,11 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     vector<Vec4i> lines;
     HoughLinesP(dst, lines, 1, CV_PI/180, 50, 50, 10 );
     
+    // ML sept 19, 2013
+    // http://docs.opencv.org/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html
+    vector<Vec3f> circles;
+    HoughCircles(dst, circles, CV_HOUGH_GRADIENT, 1, 10);
+    
     //Defaults for the corners - use far away initial value, as we want min
     cv::Point ul = cv::Point(cvMat.cols/2.0f, cvMat.rows/2.0f); //upper left -> center
     cv::Point ur = cv::Point(cvMat.cols/2.0f, cvMat.rows/2.0f); //upper right -> center
