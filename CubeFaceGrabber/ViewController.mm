@@ -19,6 +19,7 @@ using namespace cv;
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (strong, nonatomic) UIImage *originalImage;
 @property (strong, nonatomic) UIImage *perspectiveShiftedImage;
 @property (strong, nonatomic) NSArray *cubeCorners;
@@ -162,33 +163,22 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     
     vector<Vec3f> circles;
     
-    NSLog(@"madness");
-    
-    
-    if( dst.empty() ) {
-        
-        NSLog(@"emptiness");
-    } else {
-        NSLog(@"dst.rows: %i", dst.rows);
-    }
-        
-    
     /// Apply the Hough Transform to find the circles
     HoughCircles( dst, circles, CV_HOUGH_GRADIENT, 1, dst.rows/8, 60, 60);
     
-    NSLog(@"circles size: %lu", circles.size());
+    NSLog(@"circles found must be equal to or greater than 3: %lu", circles.size());
     
     /// Draw the circles detected
     for( size_t i = 0; i < circles.size(); i++ )
     {
-        NSLog(@"should be drawing a circle!");
-        
         cv::Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
         int radius = cvRound(circles[i][2]);
         // circle center
         circle( cvMat, center, 3, Scalar(0,255,0), -1, 8, 0 );
         // circle outline
         circle( cvMat, center, radius, Scalar(0,0,255), 3, 8, 0 );
+        
+        NSLog(@"drawing a circle w center: %i,%i and radius: %i", center.x, center.y, radius);
     }
 
     
