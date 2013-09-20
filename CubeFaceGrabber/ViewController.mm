@@ -166,11 +166,27 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     /// Apply the Hough Transform to find the circles
     HoughCircles( dst, circles, CV_HOUGH_GRADIENT, 1, dst.rows/8, 60, 60);
     
-    NSLog(@"circles found must be equal to or greater than 3: %lu", circles.size());
+    NSLog(@"circles found must be equal to or greater than 3. found: %lu", circles.size());
+    
+    if (![self testNumberOfCirclesFound:circles.size()]) {
+        
+        self.resultLabel.textColor = [UIColor redColor];
+        self.resultLabel.text = @"NO, FOOL!";
+        return;
+    }
+    
+    int bigRadius = 0;
+    int mediumRadius = 0;
+    int littleRadius = 0;
+    cv::Point bigCenter, mediumCenter, littleCenter;
+    
     
     /// Draw the circles detected
     for( size_t i = 0; i < circles.size(); i++ )
     {
+        
+        NSLog(@"i: %zu", i);
+        
         cv::Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
         int radius = cvRound(circles[i][2]);
         // circle center
@@ -179,8 +195,69 @@ int LineIntersect(Vec4i l1, Vec4i l2)
         circle( cvMat, center, radius, Scalar(0,0,255), 3, 8, 0 );
         
         NSLog(@"drawing a circle w center: %i,%i and radius: %i", center.x, center.y, radius);
-    }
+        
+        bigRadius = radius;
+        bigCenter = center;
+        
+        // nest in a look at the other circles
+        
+        for( size_t j = i + 1; j < circles.size(); j++) {
+            
+            NSLog(@"j: %zu", j);
+            
+            cv::Point center2(cvRound(circles[j][0]), cvRound(circles[j][1]));
+            
+            mediumRadius = cvRound(circles[j][2]);
+            mediumCenter = center2;
+            
+            for (size_t k = j + 1; k < circles.size(); k++) {
+                
+                NSLog(@"k: %zu", k);
+                
+                cv::Point center3(cvRound(circles[k][0]), cvRound(circles[k][1]));
+                
+                littleRadius = cvRound(circles[k][2]);
+                littleCenter = center3;
 
+                // test possibility
+                if (![self testOrderingOfBigRadius:bigRadius MediumRadius:mediumRadius LittleRadius:littleRadius]) {
+                    NSLog(@"failed test 2");
+                    continue;
+                }
+                
+                if (![self compareBigRadius:bigRadius MediumRadius:mediumRadius]) {
+                    NSLog(@"failed test 3");
+                    continue;
+                }
+                
+                if (![self compareBigRadius:bigRadius LittleRadius:littleRadius]) {
+                    NSLog(@"failed test 4");
+                    continue;
+                }
+                if (![self compareBigRadius:bigRadius DistBetweenBigCenter:bigCenter MediumCenter:mediumCenter]) {
+                    NSLog(@"failed test 5");
+                    continue;
+                }
+                if (![self compareBigRadius:bigRadius DistBetweenBigCenter:bigCenter LittleCenter:littleCenter]) {
+                    NSLog(@"failed test 6");
+                    continue;
+                }
+                
+                // if you passed all those tests it is a match!
+                self.resultLabel.textColor = [UIColor blueColor];
+                self.resultLabel.text = @"YES!!";
+                
+                break;
+            }
+        }
+    }
+    
+    if (!self.resultLabel.text.length > 0) {
+        
+        self.resultLabel.textColor = [UIColor redColor];
+        self.resultLabel.text = @"NO, FOOL!";
+    }
+    
     
     /*
     //Defaults for the corners - use far away initial value, as we want min
@@ -301,6 +378,74 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     */
 
 }
+
+- (BOOL)testNumberOfCirclesFound:(int)numberOfCirclesFound {
+    
+    if (numberOfCirclesFound >= 3) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)testOrderingOfBigRadius:(int)bigRadius MediumRadius:(int)mediumRadius LittleRadius:(int)littleRadius {
+    
+    if (bigRadius > mediumRadius && mediumRadius > littleRadius) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+-(BOOL)compareBigRadius:(int)bigRadius MediumRadius:(int)mediumRadius {
+    
+    float ratio = (float)bigRadius / (float)mediumRadius;
+    
+    if (ratio > 2.3 && ratio < 3.3) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+-(BOOL)compareBigRadius:(int)bigRadius LittleRadius:(int)littleRadius {
+    
+    float ratio = (float)bigRadius / (float)littleRadius;
+    
+    if (ratio > 10 && ratio < 12) {
+        return YES;
+    }
+
+    return NO;
+}
+
+-(BOOL)compareBigRadius:(int)bigRadius DistBetweenBigCenter:(cv::Point)bigCenter MediumCenter:(cv::Point)mediumCenter {
+    
+    double distance = sqrt(pow((bigCenter.x-mediumCenter.x),2) + pow((bigCenter.y-mediumCenter.y),2));
+    
+    float ratio = (float)bigRadius / distance;
+    
+    if (ratio > 2.3 && ratio < 3.3) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+-(BOOL)compareBigRadius:(int)bigRadius DistBetweenBigCenter:(cv::Point)bigCenter LittleCenter:(cv::Point)littleCenter {
+    
+    float distance = sqrt(pow((bigCenter.x-littleCenter.x),2) + pow((bigCenter.y-littleCenter.y),2));
+    
+    float ratio = (float)bigRadius / distance;
+    
+    if (ratio > 1.75 && ratio < 2.75) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+
 - (IBAction)getAndApplyTransformPressed:(id)sender {
     
     //See alternate tutorial and method at http://opencv-code.com/tutorials/automatic-perspective-correction-for-quadrilateral-objects/
