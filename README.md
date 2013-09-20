@@ -14,7 +14,7 @@ The original demo from Carl used `HoughLinesP` to decode a Rubik's cube, but I u
 If the output from `HoughCircles` passes all three tests, I call it a match. This is by no means 100% full-proof, but it at least is able to handle the 3 demo test cases I put together here.
 
 
-**Original README contents from Carl:
+**Original README contents from Carl:**
 
 About the Code:
 
