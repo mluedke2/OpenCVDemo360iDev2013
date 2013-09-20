@@ -174,7 +174,7 @@ int LineIntersect(Vec4i l1, Vec4i l2)
         
     
     /// Apply the Hough Transform to find the circles
-    HoughCircles( dst, circles, CV_HOUGH_GRADIENT, 1, dst.rows/8);
+    HoughCircles( dst, circles, CV_HOUGH_GRADIENT, 1, dst.rows/8, 60, 60);
     
     NSLog(@"circles size: %lu", circles.size());
     
