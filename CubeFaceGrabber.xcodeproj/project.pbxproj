@@ -26,6 +26,7 @@
 		D3DE509F17BDD59F0007FB39 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE509E17BDD59F0007FB39 /* opencv2.framework */; };
 		D3DE50A417BDD6730007FB39 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE50A317BDD6730007FB39 /* QuartzCore.framework */; };
 		D3DE50A617BDDFE90007FB39 /* IMG_1290.JPG in Resources */ = {isa = PBXBuildFile; fileRef = D3DE50A517BDDFE90007FB39 /* IMG_1290.JPG */; };
+		FA071FA717ECCDCD00338C72 /* image_recog_test.png in Resources */ = {isa = PBXBuildFile; fileRef = FA071FA617ECCDCD00338C72 /* image_recog_test.png */; };
 		FA696B7A17E0212900F4DDE1 /* P_photo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FA696B7917E0212900F4DDE1 /* P_photo.JPG */; };
 		FAF7A3D617EC1B13007686B0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF7A3D517EC1B13007686B0 /* logo.png */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		D3DE509E17BDD59F0007FB39 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../External/opencv2.framework; sourceTree = "<group>"; };
 		D3DE50A317BDD6730007FB39 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D3DE50A517BDDFE90007FB39 /* IMG_1290.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_1290.JPG; path = ../../TestData/IMG_1290.JPG; sourceTree = "<group>"; };
+		FA071FA617ECCDCD00338C72 /* image_recog_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_recog_test.png; sourceTree = "<group>"; };
 		FA696B7917E0212900F4DDE1 /* P_photo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = P_photo.JPG; sourceTree = "<group>"; };
 		FAF7A3D517EC1B13007686B0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 		D3DE506A17BDD5780007FB39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA071FA617ECCDCD00338C72 /* image_recog_test.png */,
 				FAF7A3D517EC1B13007686B0 /* logo.png */,
 				FA696B7917E0212900F4DDE1 /* P_photo.JPG */,
 				D3DE50A517BDDFE90007FB39 /* IMG_1290.JPG */,
@@ -252,6 +255,7 @@
 				D3DE507617BDD5780007FB39 /* Default.png in Resources */,
 				D3DE507817BDD5780007FB39 /* Default@2x.png in Resources */,
 				D3DE507A17BDD5780007FB39 /* Default-568h@2x.png in Resources */,
+				FA071FA717ECCDCD00338C72 /* image_recog_test.png in Resources */,
 				FAF7A3D617EC1B13007686B0 /* logo.png in Resources */,
 				FA696B7A17E0212900F4DDE1 /* P_photo.JPG in Resources */,
 				D3DE508017BDD5780007FB39 /* ViewController.xib in Resources */,

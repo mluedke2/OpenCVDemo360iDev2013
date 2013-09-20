@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.png" id="8">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imag_recog_test.png" id="8">
                     <rect key="frame" x="0.0" y="-2" width="320" height="445"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,6 +75,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo.png" width="287" height="287"/>
+        <image name="imag_recog_test.png" width="287" height="287"/>
     </resources>
 </document>
