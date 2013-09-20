@@ -225,11 +225,6 @@ int LineIntersect(Vec4i l1, Vec4i l2)
             
             littleRadius = cvRound(circles[j][2]);
             littleCenter = center2;
-                
-                cv::Point center3(cvRound(circles[j][0]), cvRound(circles[j][1]));
-                
-                littleRadius = cvRound(circles[j][2]);
-                littleCenter = center3;
 
                 // test possibility
                 if (![self testOrderingOfBigRadius:bigRadius LittleRadius:littleRadius]) {

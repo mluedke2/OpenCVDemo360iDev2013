@@ -21,8 +21,6 @@
 		D3DE508817BDD5780007FB39 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE508717BDD5780007FB39 /* SenTestingKit.framework */; };
 		D3DE508917BDD5780007FB39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE506317BDD5780007FB39 /* UIKit.framework */; };
 		D3DE508A17BDD5780007FB39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE506517BDD5780007FB39 /* Foundation.framework */; };
-		D3DE509217BDD5780007FB39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3DE509017BDD5780007FB39 /* InfoPlist.strings */; };
-		D3DE509517BDD5780007FB39 /* CubeFaceGrabberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE509417BDD5780007FB39 /* CubeFaceGrabberTests.m */; };
 		D3DE509F17BDD59F0007FB39 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE509E17BDD59F0007FB39 /* opencv2.framework */; };
 		D3DE50A417BDD6730007FB39 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE50A317BDD6730007FB39 /* QuartzCore.framework */; };
 		FA696B7A17E0212900F4DDE1 /* P_photo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FA696B7917E0212900F4DDE1 /* P_photo.JPG */; };
@@ -60,10 +58,6 @@
 		D3DE507F17BDD5780007FB39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		D3DE508617BDD5780007FB39 /* CubeFaceGrabberTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubeFaceGrabberTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DE508717BDD5780007FB39 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D3DE508F17BDD5780007FB39 /* CubeFaceGrabberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CubeFaceGrabberTests-Info.plist"; sourceTree = "<group>"; };
-		D3DE509117BDD5780007FB39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D3DE509317BDD5780007FB39 /* CubeFaceGrabberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeFaceGrabberTests.h; sourceTree = "<group>"; };
-		D3DE509417BDD5780007FB39 /* CubeFaceGrabberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeFaceGrabberTests.m; sourceTree = "<group>"; };
 		D3DE509E17BDD59F0007FB39 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../External/opencv2.framework; sourceTree = "<group>"; };
 		D3DE50A317BDD6730007FB39 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FA696B7917E0212900F4DDE1 /* P_photo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = P_photo.JPG; sourceTree = "<group>"; };
@@ -102,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				D3DE506917BDD5780007FB39 /* CubeFaceGrabber */,
-				D3DE508D17BDD5780007FB39 /* CubeFaceGrabberTests */,
 				D3DE506217BDD5780007FB39 /* Frameworks */,
 				D3DE506117BDD5780007FB39 /* Products */,
 			);
@@ -157,25 +150,6 @@
 				D3DE507517BDD5780007FB39 /* Default.png */,
 				D3DE507717BDD5780007FB39 /* Default@2x.png */,
 				D3DE507917BDD5780007FB39 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D3DE508D17BDD5780007FB39 /* CubeFaceGrabberTests */ = {
-			isa = PBXGroup;
-			children = (
-				D3DE509317BDD5780007FB39 /* CubeFaceGrabberTests.h */,
-				D3DE509417BDD5780007FB39 /* CubeFaceGrabberTests.m */,
-				D3DE508E17BDD5780007FB39 /* Supporting Files */,
-			);
-			path = CubeFaceGrabberTests;
-			sourceTree = "<group>";
-		};
-		D3DE508E17BDD5780007FB39 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D3DE508F17BDD5780007FB39 /* CubeFaceGrabberTests-Info.plist */,
-				D3DE509017BDD5780007FB39 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -267,7 +241,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3DE509217BDD5780007FB39 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3DE509517BDD5780007FB39 /* CubeFaceGrabberTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,14 +305,6 @@
 				D3DE507F17BDD5780007FB39 /* en */,
 			);
 			name = ViewController.xib;
-			sourceTree = "<group>";
-		};
-		D3DE509017BDD5780007FB39 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3DE509117BDD5780007FB39 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
