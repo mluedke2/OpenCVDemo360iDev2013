@@ -216,7 +216,6 @@ int LineIntersect(Vec4i l1, Vec4i l2)
 
                 // test possibility
                 if (![self testOrderingOfBigRadius:bigRadius LittleRadius:littleRadius]) {
-                    NSLog(@"failed test 2");
                     continue;
                 }
                 
@@ -227,7 +226,7 @@ int LineIntersect(Vec4i l1, Vec4i l2)
                 } */
                 
                 if (![self compareBigRadius:bigRadius LittleRadius:littleRadius]) {
-                    NSLog(@"failed test 4");
+                    NSLog(@"ratio of big radius to little radius is off, this possibility fails");
                     continue;
                 }
                 /*
@@ -238,7 +237,7 @@ int LineIntersect(Vec4i l1, Vec4i l2)
                 */
                 
                 if (![self compareBigRadius:bigRadius DistBetweenBigCenter:bigCenter LittleCenter:littleCenter]) {
-                    NSLog(@"failed test 6");
+                    NSLog(@"ratio of big radius to center distances is off, this possibility fails");
                     continue;
                 }
                 
