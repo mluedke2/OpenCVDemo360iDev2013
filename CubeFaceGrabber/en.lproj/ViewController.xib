@@ -8,6 +8,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="imageView" destination="8" id="18"/>
+                <outlet property="letsSeeButton" destination="17" id="jKl-Nv-Op7"/>
+                <outlet property="nextTest" destination="Chf-nf-skM" id="Yan-ge-0V4"/>
                 <outlet property="resultLabel" destination="WDm-Sa-Ntd" id="VxX-k2-n76"/>
                 <outlet property="view" destination="6" id="7"/>
             </connections>
@@ -17,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="fake_p.png" id="8">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.png" id="8">
                     <rect key="frame" x="0.0" y="-2" width="320" height="445"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,6 +70,16 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Chf-nf-skM">
+                    <rect key="frame" x="225" y="522" width="65" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Next Test">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextTestPressed:" destination="-1" eventType="touchUpInside" id="NIk-Y9-IqP"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -75,6 +87,6 @@
         </view>
     </objects>
     <resources>
-        <image name="fake_p.png" width="410" height="464"/>
+        <image name="logo.png" width="287" height="287"/>
     </resources>
 </document>

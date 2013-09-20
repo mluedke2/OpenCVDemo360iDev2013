@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CubeFaceGrabber/ViewController.mm"
-            timestampString = "401352254.214171"
+            timestampString = "401396936.577408"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "-detectFacesPressed:"
             landmarkType = "5">
             <Locations>

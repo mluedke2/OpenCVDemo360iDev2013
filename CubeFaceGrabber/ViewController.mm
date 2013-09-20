@@ -18,8 +18,11 @@ using namespace cv;
 
 
 @interface ViewController ()
+@property (nonatomic) int testCase;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (weak, nonatomic) IBOutlet UIButton *letsSeeButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextTest;
 @property (strong, nonatomic) UIImage *originalImage;
 @property (strong, nonatomic) UIImage *perspectiveShiftedImage;
 @property (strong, nonatomic) NSArray *cubeCorners;
@@ -31,6 +34,10 @@ using namespace cv;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.testCase = 1;
+    self.letsSeeButton.hidden = NO;
+    self.nextTest.hidden = YES;
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -111,9 +118,37 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     return(TRUE);
 }
 
+- (IBAction)nextTestPressed:(id)sender {
+    
+    if (self.testCase == 1) {
+        self.imageView.image = [UIImage imageNamed:@"fake_p.png"];
+        self.testCase = 2;
+        self.nextTest.hidden=YES;
+        self.letsSeeButton.hidden = NO;
+        self.resultLabel.text = @"";
+    }
+    else if (self.testCase == 2) {
+        self.imageView.image = [UIImage imageNamed:@"tester.png"];
+        self.testCase = 3;
+        self.nextTest.hidden=YES;
+        self.letsSeeButton.hidden = NO;
+        self.resultLabel.text = @"";
+    }
+    else if (self.testCase == 3) {
+        self.imageView.image = [UIImage imageNamed:@"logo.png"];
+        self.testCase = 1;
+        self.nextTest.hidden=YES;
+        self.letsSeeButton.hidden = NO;
+        self.resultLabel.text = @"";
+    }
+    
+}
 
 
 - (IBAction)detectFacesPressed:(id)sender {
+    
+    self.nextTest.hidden=NO;
+    self.letsSeeButton.hidden=YES;
     
     //Conversion from http://stackoverflow.com/a/10254561
     //See Also http://stackoverflow.com/a/14336157 for orientation
@@ -219,22 +254,10 @@ int LineIntersect(Vec4i l1, Vec4i l2)
                     continue;
                 }
                 
-                /*
-                if (![self compareBigRadius:bigRadius MediumRadius:mediumRadius]) {
-                    NSLog(@"failed test 3");
-                    continue;
-                } */
-                
                 if (![self compareBigRadius:bigRadius LittleRadius:littleRadius]) {
                     NSLog(@"ratio of big radius to little radius is off, this possibility fails");
                     continue;
                 }
-                /*
-                if (![self compareBigRadius:bigRadius DistBetweenBigCenter:bigCenter MediumCenter:mediumCenter]) {
-                    NSLog(@"failed test 5");
-                    continue;
-                }
-                */
                 
                 if (![self compareBigRadius:bigRadius DistBetweenBigCenter:bigCenter LittleCenter:littleCenter]) {
                     NSLog(@"ratio of big radius to center distances is off, this possibility fails");
