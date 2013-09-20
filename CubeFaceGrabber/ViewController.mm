@@ -145,7 +145,7 @@ int LineIntersect(Vec4i l1, Vec4i l2)
 }
 
 
-- (IBAction)detectFacesPressed:(id)sender {
+- (IBAction)detectCircles:(id)sender {
     
     self.nextTest.hidden=NO;
     self.letsSeeButton.hidden=YES;
@@ -170,28 +170,15 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), self.imageView.image.CGImage);
     CGContextRelease(contextRef);
     
+    cv::Mat dst;
     
-    // Hough Line Transform example from
-    //From http://docs.opencv.org/doc/tutorials/imgproc/imgtrans/hough_lines/hough_lines.html
-    cv::Mat dst, ddst, cdst;
-    
-    // Canny!
     // http://docs.opencv.org/doc/tutorials/imgproc/imgtrans/canny_detector/canny_detector.html
     // Canny(cvMat, dst, 100, 200, 3);
     Canny(cvMat, dst, 10, 30, 3);
     
-    //cvtColor(dst, cdst, CV_GRAY2RGB);
-
-    //vector<Vec4i> lines;
-//    HoughLinesP(dst, lines, 1, CV_PI/180, 50, 50, 10 );
-    
      
     // ML sept 19, 2013
     // http://docs.opencv.org/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html
-
-    /// Convert it back to gray
-  //  cv::Mat src_gray;
-   // cvtColor(dst, dst, CV_RGB2GRAY);
     
     /// Reduce the noise so we avoid false circle detection
     GaussianBlur( dst, dst, cv::Size(9, 9), 2, 2 );
@@ -274,83 +261,6 @@ int LineIntersect(Vec4i l1, Vec4i l2)
         self.resultLabel.text = @"NO, FOOL!";
     }
     
-    
-    /*
-    //Defaults for the corners - use far away initial value, as we want min
-    cv::Point ul = cv::Point(cvMat.cols/2.0f, cvMat.rows/2.0f); //upper left -> center
-    cv::Point ur = cv::Point(cvMat.cols/2.0f, cvMat.rows/2.0f); //upper right -> center
-    cv::Point ll = cv::Point(cvMat.cols/2.0f, cvMat.rows/2.0f); //lower left -> center
-    cv::Point lr = cv::Point(cvMat.cols/2.0f, cvMat.rows/2.0f); //lower right -> center
-
-    for( size_t i = 0; i < lines.size(); i++ )
-    {
-        Vec4i l = lines[i];
-        for (size_t i2 = 0; i2 < lines.size(); i2++ ) {
-            if (i != i2) {
-                Vec4i l2=lines[i2];
-                if (LineIntersect(l, l2)) {
-                    line( cdst, cv::Point(l[0], l[1]), cv::Point(l[2], l[3]), Scalar(0,0,255), 3, CV_AA);
-                    line( cvMat, cv::Point(l[0], l[1]), cv::Point(l[2], l[3]), Scalar(0,0,255), 3, CV_AA);
-                    //Check for bounding corners (from Carl)
-                    if (sqrt(l[0]*l[0]+l[1]*l[1]) < sqrt(ul.x*ul.x+ul.y*ul.y)) {
-                        ul = cv::Point(l[0],l[1]);
-                    }
-                    if (sqrt((cvMat.cols -l[0])*(cvMat.cols -l[0])+l[1]*l[1]) < sqrt((cvMat.cols -ur.x)*(cvMat.cols -ur.x)+ur.y*ur.y)) {
-                        ur = cv::Point(l[0],l[1]);
-                    }
-                    if (sqrt(l[0]*l[0]+(cvMat.rows -l[1])*(cvMat.rows -l[1])) < sqrt(ll.x*ll.x+(cvMat.rows -ll.y)*(cvMat.rows -ll.y))) {
-                        ll = cv::Point(l[0],l[1]);
-                    }
-                    if (sqrt((cvMat.cols -l[0])*(cvMat.cols -l[0])+(cvMat.rows -l[1])*(cvMat.rows -l[1])) < sqrt((cvMat.cols -lr.x)*(cvMat.cols -lr.x)+(cvMat.rows -lr.y)*(cvMat.rows -lr.y))) {
-                        lr = cv::Point(l[0],l[1]);
-                    }
-                    if (sqrt(l[2]*l[2]+l[3]*l[3]) < sqrt(ul.x*ul.x+ul.y*ul.y)) {
-                        ul = cv::Point(l[2],l[3]);
-                    }
-                    if (sqrt((cvMat.cols -l[2])*(cvMat.cols -l[2])+l[3]*l[3]) < sqrt((cvMat.cols -ur.x)*(cvMat.cols -ur.x)+ur.y*ur.y)) {
-                        ur = cv::Point(l[2],l[3]);
-                    }
-                    if (sqrt(l[2]*l[2]+(cvMat.rows -l[3])*(cvMat.rows -l[3])) < sqrt(ll.x*ll.x+(cvMat.rows -ll.y)*(cvMat.rows -ll.y))) {
-                        ll = cv::Point(l[2],l[3]);
-                    }
-                    if (sqrt((cvMat.cols -l[2])*(cvMat.cols -l[2])+(cvMat.rows -l[3])*(cvMat.rows -l[3])) < sqrt((cvMat.cols -lr.x)*(cvMat.cols -lr.x)+(cvMat.rows -lr.y)*(cvMat.rows -lr.y))) {
-                        lr = cv::Point(l[2],l[3]);
-                    }
-                    break;
-                }
-            }
-        }
-    }
-    */
-    /*
-    
-    circle( cvMat,
-           ul,
-           12.0,
-           Scalar( 0, 255, 0 ),
-           1,
-           8 );
-    circle( cvMat,
-           ur,
-           12.0,
-           Scalar( 0, 155, 100 ),
-           1,
-           8 );
-    circle( cvMat,
-           ll,
-           12.0,
-           Scalar( 255, 0, 0 ),
-           1,
-           8 );
-    circle( cvMat,
-           lr,
-           12.0,
-           Scalar( 155, 0, 100 ),
-           1,
-           8 );
-    
-    */
-
     NSData *data = [NSData dataWithBytes:cvMat.data length:cvMat.elemSize() * cvMat.total()];
         
     if (cvMat.elemSize() == 1) {
@@ -379,20 +289,6 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     CGColorSpaceRelease(colorSpace);
 
     [self.imageView setImage:newImage];
-    
-    /*
-    self.cubeCorners = @[
-                         [NSNumber numberWithFloat:ul.x],
-                         [NSNumber numberWithFloat:ul.y],
-                         [NSNumber numberWithFloat:ur.x],
-                         [NSNumber numberWithFloat:ur.y],
-                         [NSNumber numberWithFloat:ll.x],
-                         [NSNumber numberWithFloat:ll.y],
-                         [NSNumber numberWithFloat:lr.x],
-                         [NSNumber numberWithFloat:lr.y]
-                         ];
-    */
-
 }
 
 - (BOOL)testNumberOfCirclesFound:(int)numberOfCirclesFound {
