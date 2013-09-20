@@ -201,13 +201,13 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     /// Apply the Hough Transform to find the circles
     HoughCircles( dst, circles, CV_HOUGH_GRADIENT, 1, dst.rows/8, 60, 60);
     
-    NSLog(@"circles found must be equal to or greater than 2. found: %lu", circles.size());
+    NSLog(@"circles found must be equal to or greater than 2. found: %lu\n\n", circles.size());
     
     if (![self testNumberOfCirclesFound:circles.size()]) {
         
         self.resultLabel.textColor = [UIColor redColor];
         self.resultLabel.text = @"NO, FOOL!";
-        return;
+       // return;
     }
     
     int bigRadius = 0;
@@ -218,9 +218,6 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     /// Draw the circles detected
     for( size_t i = 0; i < circles.size(); i++ )
     {
-        
-        NSLog(@"i: %zu", i);
-        
         cv::Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
         int radius = cvRound(circles[i][2]);
         // circle center
@@ -228,7 +225,7 @@ int LineIntersect(Vec4i l1, Vec4i l2)
         // circle outline
         circle( cvMat, center, radius, Scalar(0,0,255), 3, 8, 0 );
         
-        NSLog(@"drawing a circle w center: %i,%i and radius: %i", center.x, center.y, radius);
+        NSLog(@"drawing a circle w center: %i,%i and radius: %i\n\n", center.x, center.y, radius);
         
         bigRadius = radius;
         bigCenter = center;
@@ -236,8 +233,6 @@ int LineIntersect(Vec4i l1, Vec4i l2)
         // nest in a look at the other circles
         
         for( size_t j = i + 1; j < circles.size(); j++) {
-            
-            NSLog(@"j: %zu", j);
             
             cv::Point center2(cvRound(circles[j][0]), cvRound(circles[j][1]));
             
@@ -255,12 +250,12 @@ int LineIntersect(Vec4i l1, Vec4i l2)
                 }
                 
                 if (![self compareBigRadius:bigRadius LittleRadius:littleRadius]) {
-                    NSLog(@"ratio of big radius to little radius is off, this possibility fails");
+                    NSLog(@"ratio of big radius to little radius is off, this possibility fails\n\n");
                     continue;
                 }
                 
                 if (![self compareBigRadius:bigRadius DistBetweenBigCenter:bigCenter LittleCenter:littleCenter]) {
-                    NSLog(@"ratio of big radius to center distances is off, this possibility fails");
+                    NSLog(@"ratio of big radius to center distances is off, this possibility fails\n\n");
                     continue;
                 }
                 
