@@ -29,6 +29,7 @@
 		FA696B7A17E0212900F4DDE1 /* P_photo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FA696B7917E0212900F4DDE1 /* P_photo.JPG */; };
 		FABE856317ECD08300FA7869 /* image_recog_test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FABE856217ECD08300FA7869 /* image_recog_test.jpg */; };
 		FABE856517ECD14800FA7869 /* fake_p.png in Resources */ = {isa = PBXBuildFile; fileRef = FABE856417ECD14800FA7869 /* fake_p.png */; };
+		FABE856717ECD1C600FA7869 /* tester.png in Resources */ = {isa = PBXBuildFile; fileRef = FABE856617ECD1C600FA7869 /* tester.png */; };
 		FAF7A3D617EC1B13007686B0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF7A3D517EC1B13007686B0 /* logo.png */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		FA696B7917E0212900F4DDE1 /* P_photo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = P_photo.JPG; sourceTree = "<group>"; };
 		FABE856217ECD08300FA7869 /* image_recog_test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image_recog_test.jpg; path = ../../../../prolific/image_recog_test.jpg; sourceTree = "<group>"; };
 		FABE856417ECD14800FA7869 /* fake_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fake_p.png; sourceTree = "<group>"; };
+		FABE856617ECD1C600FA7869 /* tester.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tester.png; sourceTree = "<group>"; };
 		FAF7A3D517EC1B13007686B0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF7A3D517EC1B13007686B0 /* logo.png */,
+				FABE856617ECD1C600FA7869 /* tester.png */,
 				FABE856417ECD14800FA7869 /* fake_p.png */,
 				FABE856217ECD08300FA7869 /* image_recog_test.jpg */,
 				FA696B7917E0212900F4DDE1 /* P_photo.JPG */,
@@ -262,6 +265,7 @@
 				FAF7A3D617EC1B13007686B0 /* logo.png in Resources */,
 				FA696B7A17E0212900F4DDE1 /* P_photo.JPG in Resources */,
 				FABE856317ECD08300FA7869 /* image_recog_test.jpg in Resources */,
+				FABE856717ECD1C600FA7869 /* tester.png in Resources */,
 				D3DE508017BDD5780007FB39 /* ViewController.xib in Resources */,
 				D3DE50A617BDDFE90007FB39 /* IMG_1290.JPG in Resources */,
 			);
