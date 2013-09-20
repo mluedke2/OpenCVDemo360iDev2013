@@ -1,5 +1,5 @@
-OpenCVDemo360iDev2013
-=====================
+Prolific P Finder
+=================
 
 This code is forked from Carl Brown's original for his ["Apps That Can See" talk at 360iDev 2013](http://www.slideshare.net/carlbrown/writing-apps-that-can-see). It makes great use of [OpenCV](http://opencv.org/), an open source computer vision library.
 
