@@ -138,17 +138,61 @@ int LineIntersect(Vec4i l1, Vec4i l2)
     // Hough Line Transform example from
     //From http://docs.opencv.org/doc/tutorials/imgproc/imgtrans/hough_lines/hough_lines.html
     cv::Mat dst, ddst, cdst;
-    Canny(cvMat, dst, 100, 200, 3);
-    cvtColor(dst, cdst, CV_GRAY2RGB);
-
-    vector<Vec4i> lines;
-    HoughLinesP(dst, lines, 1, CV_PI/180, 50, 50, 10 );
     
+    // Canny!
+    // http://docs.opencv.org/doc/tutorials/imgproc/imgtrans/canny_detector/canny_detector.html
+    // Canny(cvMat, dst, 100, 200, 3);
+    Canny(cvMat, dst, 10, 30, 3);
+    
+    //cvtColor(dst, cdst, CV_GRAY2RGB);
+
+    //vector<Vec4i> lines;
+//    HoughLinesP(dst, lines, 1, CV_PI/180, 50, 50, 10 );
+    
+     
     // ML sept 19, 2013
     // http://docs.opencv.org/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html
-    vector<Vec3f> circles;
-    HoughCircles(dst, circles, CV_HOUGH_GRADIENT, 1, 10);
+
+    /// Convert it back to gray
+  //  cv::Mat src_gray;
+   // cvtColor(dst, dst, CV_RGB2GRAY);
     
+    /// Reduce the noise so we avoid false circle detection
+    GaussianBlur( dst, dst, cv::Size(9, 9), 2, 2 );
+    
+    vector<Vec3f> circles;
+    
+    NSLog(@"madness");
+    
+    
+    if( dst.empty() ) {
+        
+        NSLog(@"emptiness");
+    } else {
+        NSLog(@"dst.rows: %i", dst.rows);
+    }
+        
+    
+    /// Apply the Hough Transform to find the circles
+    HoughCircles( dst, circles, CV_HOUGH_GRADIENT, 1, dst.rows/8);
+    
+    NSLog(@"circles size: %lu", circles.size());
+    
+    /// Draw the circles detected
+    for( size_t i = 0; i < circles.size(); i++ )
+    {
+        NSLog(@"should be drawing a circle!");
+        
+        cv::Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
+        int radius = cvRound(circles[i][2]);
+        // circle center
+        circle( cvMat, center, 3, Scalar(0,255,0), -1, 8, 0 );
+        // circle outline
+        circle( cvMat, center, radius, Scalar(0,0,255), 3, 8, 0 );
+    }
+
+    
+    /*
     //Defaults for the corners - use far away initial value, as we want min
     cv::Point ul = cv::Point(cvMat.cols/2.0f, cvMat.rows/2.0f); //upper left -> center
     cv::Point ur = cv::Point(cvMat.cols/2.0f, cvMat.rows/2.0f); //upper right -> center
@@ -194,6 +238,8 @@ int LineIntersect(Vec4i l1, Vec4i l2)
             }
         }
     }
+    */
+    /*
     
     circle( cvMat,
            ul,
@@ -219,6 +265,8 @@ int LineIntersect(Vec4i l1, Vec4i l2)
            Scalar( 155, 0, 100 ),
            1,
            8 );
+    
+    */
 
     NSData *data = [NSData dataWithBytes:cvMat.data length:cvMat.elemSize() * cvMat.total()];
         
@@ -249,6 +297,7 @@ int LineIntersect(Vec4i l1, Vec4i l2)
 
     [self.imageView setImage:newImage];
     
+    /*
     self.cubeCorners = @[
                          [NSNumber numberWithFloat:ul.x],
                          [NSNumber numberWithFloat:ul.y],
@@ -259,6 +308,7 @@ int LineIntersect(Vec4i l1, Vec4i l2)
                          [NSNumber numberWithFloat:lr.x],
                          [NSNumber numberWithFloat:lr.y]
                          ];
+    */
 
 }
 - (IBAction)getAndApplyTransformPressed:(id)sender {

@@ -6,155 +6,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CubeFaceGrabber/ViewController.mm"
-            timestampString = "401344906.37961"
+            timestampString = "401350572.437278"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "-detectFacesPressed:"
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[ViewController detectFacesPressed:]"
                   moduleName = "CubeFaceGrabber"
                   urlString = "file://localhost/Users/mluedke2/Desktop/dev/OpenCVDemo360iDev2013/CubeFaceGrabber/CubeFaceGrabber/ViewController.mm"
-                  timestampString = "401344922.445151"
+                  timestampString = "401347836.505099"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "149"
-                  endingLineNumber = "149"
-                  offsetFromSymbolStart = "1834">
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "1464">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[ViewController detectFacesPressed:]"
                   moduleName = "CubeFaceGrabber"
                   urlString = "file://localhost/Users/mluedke2/Desktop/dev/OpenCVDemo360iDev2013/CubeFaceGrabber/CubeFaceGrabber/ViewController.mm"
-                  timestampString = "401344922.445509"
+                  timestampString = "401347836.505431"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "149"
-                  endingLineNumber = "149"
-                  offsetFromSymbolStart = "9532">
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "3270">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CubeFaceGrabber/ViewController.mm"
-            timestampString = "401344907.267519"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "-detectFacesPressed:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController detectFacesPressed:]"
-                  moduleName = "CubeFaceGrabber"
-                  urlString = "file://localhost/Users/mluedke2/Desktop/dev/OpenCVDemo360iDev2013/CubeFaceGrabber/CubeFaceGrabber/ViewController.mm"
-                  timestampString = "401344922.445852"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "149"
-                  endingLineNumber = "149"
-                  offsetFromSymbolStart = "1834">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController detectFacesPressed:]"
-                  moduleName = "CubeFaceGrabber"
-                  urlString = "file://localhost/Users/mluedke2/Desktop/dev/OpenCVDemo360iDev2013/CubeFaceGrabber/CubeFaceGrabber/ViewController.mm"
-                  timestampString = "401344922.446165"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "149"
-                  endingLineNumber = "149"
-                  offsetFromSymbolStart = "9532">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CubeFaceGrabber/ViewController.mm"
-            timestampString = "401344908.31578"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "-detectFacesPressed:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController detectFacesPressed:]"
-                  moduleName = "CubeFaceGrabber"
-                  urlString = "file://localhost/Users/mluedke2/Desktop/dev/OpenCVDemo360iDev2013/CubeFaceGrabber/CubeFaceGrabber/ViewController.mm"
-                  timestampString = "401344922.446489"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "149"
-                  endingLineNumber = "149"
-                  offsetFromSymbolStart = "1834">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController detectFacesPressed:]"
-                  moduleName = "CubeFaceGrabber"
-                  urlString = "file://localhost/Users/mluedke2/Desktop/dev/OpenCVDemo360iDev2013/CubeFaceGrabber/CubeFaceGrabber/ViewController.mm"
-                  timestampString = "401344922.446791"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "149"
-                  endingLineNumber = "149"
-                  offsetFromSymbolStart = "9532">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CubeFaceGrabber/ViewController.mm"
-            timestampString = "401344909.381638"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "-detectFacesPressed:"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

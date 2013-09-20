@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="IMG_2660.JPG" id="8">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.png" id="8">
                     <rect key="frame" x="0.0" y="-2" width="320" height="445"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
@@ -60,6 +60,6 @@
         </view>
     </objects>
     <resources>
-        <image name="IMG_2660.JPG" width="2448" height="3264"/>
+        <image name="logo.png" width="287" height="287"/>
     </resources>
 </document>
