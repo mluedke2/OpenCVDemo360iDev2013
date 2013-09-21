@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A67E0671-A17B-4268-A822-D06FF19B08B4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ProlificPFinder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1C0F9505-E23E-47E6-9FC8-B5079A62646B</key>
+		<string>https://github.com/mluedke2/OpenCVDemo360iDev2013.git</string>
+		<key>B498A059-6B9A-467F-8311-B79D73D27A1F</key>
+		<string>ssh://github.com/carlbrown/OpenCVDemo360iDev2013.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CubeFaceGrabber/ProlificPFinder.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1C0F9505-E23E-47E6-9FC8-B5079A62646B</key>
+		<string>../..</string>
+		<key>B498A059-6B9A-467F-8311-B79D73D27A1F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mluedke2/OpenCVDemo360iDev2013.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B498A059-6B9A-467F-8311-B79D73D27A1F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1C0F9505-E23E-47E6-9FC8-B5079A62646B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CubeFaceGrabber</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B498A059-6B9A-467F-8311-B79D73D27A1F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OpenCVDemo360iDev2013</string>
+		</dict>
+	</array>
+</dict>
+</plist>

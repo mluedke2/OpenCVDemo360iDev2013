@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProlificPFinder/ViewController.mm"
-            timestampString = "401404774.357704"
+            timestampString = "401440786.832112"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-detectCircles:"
             landmarkType = "5">
             <Locations>

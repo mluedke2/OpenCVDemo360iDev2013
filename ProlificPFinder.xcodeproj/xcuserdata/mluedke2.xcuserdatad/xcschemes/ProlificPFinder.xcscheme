@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D3DE505F17BDD5780007FB39"
-               BuildableName = "CubeFaceGrabber.app"
+               BuildableName = "ProlificPFinder.app"
                BlueprintName = "ProlificPFinder"
                ReferencedContainer = "container:ProlificPFinder.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D3DE508517BDD5780007FB39"
-               BuildableName = "CubeFaceGrabberTests.octest"
+               BuildableName = "ProlificPFinderTests.octest"
                BlueprintName = "ProlificPFinderTests"
                ReferencedContainer = "container:ProlificPFinder.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3DE505F17BDD5780007FB39"
-            BuildableName = "CubeFaceGrabber.app"
+            BuildableName = "ProlificPFinder.app"
             BlueprintName = "ProlificPFinder"
             ReferencedContainer = "container:ProlificPFinder.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3DE505F17BDD5780007FB39"
-            BuildableName = "CubeFaceGrabber.app"
+            BuildableName = "ProlificPFinder.app"
             BlueprintName = "ProlificPFinder"
             ReferencedContainer = "container:ProlificPFinder.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3DE505F17BDD5780007FB39"
-            BuildableName = "CubeFaceGrabber.app"
+            BuildableName = "ProlificPFinder.app"
             BlueprintName = "ProlificPFinder"
             ReferencedContainer = "container:ProlificPFinder.xcodeproj">
          </BuildableReference>
