@@ -10,43 +10,31 @@
 	<string>ProlificPFinder</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1C0F9505-E23E-47E6-9FC8-B5079A62646B</key>
-		<string>https://github.com/mluedke2/OpenCVDemo360iDev2013.git</string>
-		<key>B498A059-6B9A-467F-8311-B79D73D27A1F</key>
-		<string>ssh://github.com/carlbrown/OpenCVDemo360iDev2013.git</string>
+		<key>717271D9A88CCD24F500F978BE6E72148EFAFD5F</key>
+		<string>github.com:mluedke2/Prolific-P-Finder.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CubeFaceGrabber/ProlificPFinder.xcodeproj/project.xcworkspace</string>
+	<string>ProlificPFinder.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1C0F9505-E23E-47E6-9FC8-B5079A62646B</key>
+		<key>717271D9A88CCD24F500F978BE6E72148EFAFD5F</key>
 		<string>../..</string>
-		<key>B498A059-6B9A-467F-8311-B79D73D27A1F</key>
-		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mluedke2/OpenCVDemo360iDev2013.git</string>
+	<string>github.com:mluedke2/Prolific-P-Finder.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B498A059-6B9A-467F-8311-B79D73D27A1F</string>
+	<string>717271D9A88CCD24F500F978BE6E72148EFAFD5F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1C0F9505-E23E-47E6-9FC8-B5079A62646B</string>
+			<string>717271D9A88CCD24F500F978BE6E72148EFAFD5F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>CubeFaceGrabber</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B498A059-6B9A-467F-8311-B79D73D27A1F</string>
-			<key>IDESourceControlWCCName</key>
-			<string>OpenCVDemo360iDev2013</string>
+			<string>Prolific-P-Finder</string>
 		</dict>
 	</array>
 </dict>

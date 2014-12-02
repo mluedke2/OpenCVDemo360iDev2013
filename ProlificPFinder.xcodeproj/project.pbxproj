@@ -21,8 +21,8 @@
 		D3DE508817BDD5780007FB39 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE508717BDD5780007FB39 /* SenTestingKit.framework */; };
 		D3DE508917BDD5780007FB39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE506317BDD5780007FB39 /* UIKit.framework */; };
 		D3DE508A17BDD5780007FB39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE506517BDD5780007FB39 /* Foundation.framework */; };
-		D3DE509F17BDD59F0007FB39 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE509E17BDD59F0007FB39 /* opencv2.framework */; };
 		D3DE50A417BDD6730007FB39 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE50A317BDD6730007FB39 /* QuartzCore.framework */; };
+		FA3752661A2E861600238D0F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3752651A2E861600238D0F /* opencv2.framework */; };
 		FA696B7A17E0212900F4DDE1 /* P_photo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FA696B7917E0212900F4DDE1 /* P_photo.JPG */; };
 		FABE856517ECD14800FA7869 /* fake_p.png in Resources */ = {isa = PBXBuildFile; fileRef = FABE856417ECD14800FA7869 /* fake_p.png */; };
 		FABE856717ECD1C600FA7869 /* tester.png in Resources */ = {isa = PBXBuildFile; fileRef = FABE856617ECD1C600FA7869 /* tester.png */; };
@@ -58,8 +58,8 @@
 		D3DE507F17BDD5780007FB39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		D3DE508617BDD5780007FB39 /* ProlificPFinderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProlificPFinderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DE508717BDD5780007FB39 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D3DE509E17BDD59F0007FB39 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../External/opencv2.framework; sourceTree = "<group>"; };
 		D3DE50A317BDD6730007FB39 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FA3752651A2E861600238D0F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../opencv2.framework; sourceTree = "<group>"; };
 		FA696B7917E0212900F4DDE1 /* P_photo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = P_photo.JPG; sourceTree = "<group>"; };
 		FABE856417ECD14800FA7869 /* fake_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fake_p.png; sourceTree = "<group>"; };
 		FABE856617ECD1C600FA7869 /* tester.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tester.png; sourceTree = "<group>"; };
@@ -71,8 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3752661A2E861600238D0F /* opencv2.framework in Frameworks */,
 				D3DE50A417BDD6730007FB39 /* QuartzCore.framework in Frameworks */,
-				D3DE509F17BDD59F0007FB39 /* opencv2.framework in Frameworks */,
 				D3DE506417BDD5780007FB39 /* UIKit.framework in Frameworks */,
 				D3DE506617BDD5780007FB39 /* Foundation.framework in Frameworks */,
 				D3DE506817BDD5780007FB39 /* CoreGraphics.framework in Frameworks */,
@@ -113,8 +113,8 @@
 		D3DE506217BDD5780007FB39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA3752651A2E861600238D0F /* opencv2.framework */,
 				D3DE50A317BDD6730007FB39 /* QuartzCore.framework */,
-				D3DE509E17BDD59F0007FB39 /* opencv2.framework */,
 				D3DE506317BDD5780007FB39 /* UIKit.framework */,
 				D3DE506517BDD5780007FB39 /* Foundation.framework */,
 				D3DE506717BDD5780007FB39 /* CoreGraphics.framework */,
@@ -191,7 +191,7 @@
 			name = ProlificPFinderTests;
 			productName = CubeFaceGrabberTests;
 			productReference = D3DE508617BDD5780007FB39 /* ProlificPFinderTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -372,6 +372,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../External\"",
+					/Users/mluedke2/Desktop/prolific,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProlificPFinder/ProlificPFinder-Prefix.pch";
@@ -387,6 +388,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../External\"",
+					/Users/mluedke2/Desktop/prolific,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProlificPFinder/ProlificPFinder-Prefix.pch";
